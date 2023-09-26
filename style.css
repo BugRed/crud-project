@@ -1,0 +1,45 @@
+* {
+  font-family: "Roboto Slab", serif;
+  font-family: "Rubik", sans-serif;
+}
+
+#table {
+  border: solid red 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#product-list{
+  border: solid red 1px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: solid red 1px;
+  height: 33vh;
+  width: 200vh;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  
+  
+}
+li {
+
+  position: absolute;
+}
+
+#product_name {
+  width: 75px;
+  height: 25px;
+}
+
+button {
+  display: inline;
+  width: 75px;
+  height: 25px;
+}
