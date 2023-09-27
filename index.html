@@ -10,73 +10,64 @@
       rel="stylesheet"
     />
     <title>CRUD</title>
-    <link rel="stylesheet" href="./style.css" />
-    <h1 id="table">Tabelas</h1>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
-    <form id="comments_form" action="#" method="post">
-  <fieldset>
-    <legend><h1>Novos Produtos</h1></legend>
-      
-    <div id="product-list">
-      <p>
-        <label for="author">Name:<em class="required"></em></label>
-        <input class="name employee" name="author" id="author" type="text"/>
-      </p>
-  
-      <p>
-        <label for="price">Preço:</label>
-        <input class="price product" name="price" id="price" type="text" />
-      </p>
-  
-      <p>
-        <label for="pass">Quantidade:</label>
-        <input name="pass" id="pass" type="text" />
-      </p>
-      <p>
-      <input class="btn product" type="button" value="Enviar!" id="btnSubmit"/>
-    </p></div>
-  </fieldset>
+  <body class="container">
 
-  <div id="container">
-    <table id="table-view">
-      <tbody>
+    <h1 class="text-center">Tabelas</h1>
+
+    <form class="form">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="name" id="name" class="form-control" required autofocus>
+      </div>
+
+      <div class="form-group">
+        <label for="data">Date</label>
+        <input type="date" id="data" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="quantidade">Quantity</label>
+        <input type="number" min="1" step="1" id="quantidade" class="form-control" value="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="valor">Value</label>
+        <input type="number" id="valor" class="form-control" min="0.01" step="0.01" value="0.0" required>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Include</button>
+    </form>
+
+    <div class="text-center">
+      <button class="btn btn-primary text-center" type="button">Import Products</button>
+      <button class="btn btn-primary text-center" type="button">Delete Product</button>
+    </div>
+
+    <br>
+    <br>
+
+    <table class="table table-hover table-bordered">
+      <thead>
         <tr>
-          <td class="td nome" name="td">Nome:</td>
-      </tr>
-      <tr>
-        <td class="td price" name="td">Preço:</td>
-      </tr>
-      <tr>
-        <td class="td quantity" name="td">Quantidade:</td>
-      </tr>
-      </tbody>   
-  </table>
-  </div>
-  
+          <th>Name</th>
+          <th>Date</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th>Total Value</th>
+        </tr>
+      </thead>
 
-  <!-- <fieldset>
-    <legend>Novos Funcionarios</legend>
-      <p>
-    <div id="product-list">
-        <label for="author">Name: <em class="required"></em></label>
-        <input class="name employee" placeholder="(Required)" name="author" id="author" type="text"/>
-      </p>
-  
-      <p>
-        <label for="price">Salario:</label>
-        <input class="price employee" placeholder="(Required)" name="price" id="price" type="text" />
-      </p>
-  
-      <p>
-        <label for="email">Email:</label>
-        <input placeholder="(Required)" name="email" id="email" type="text" />
-      </p>
-      <p>
-      <input class="btn employee" type="button" value="Enviar!" id="btnSubmit"/>
-    </p></div>
-  </fieldset> -->
- 
-    <script src="./script.js"></script>
+      <tbody>
+      </tbody>
+
+      <tfoot>
+      </tfoot>
+    </table>
+    <script src="./js/script.js"></script>
   </body>
 </html>
