@@ -16,28 +16,46 @@
   <body>
     <form id="comments_form" action="#" method="post">
   <fieldset>
-    <legend>Novos Produtos</legend>
-      <p>
+    <legend><h1>Novos Produtos</h1></legend>
+      
     <div id="product-list">
-        <label for="author">Name: <em class="required"></em></label>
-        <input class="name employee" placeholder="(Required)" name="author" id="author" type="text"/>
+      <p>
+        <label for="author">Name:<em class="required"></em></label>
+        <input class="name employee" name="author" id="author" type="text"/>
       </p>
   
       <p>
         <label for="price">Preço:</label>
-        <input class="price product" placeholder="(Required)" name="price" id="price" type="text" />
+        <input class="price product" name="price" id="price" type="text" />
       </p>
   
       <p>
         <label for="pass">Quantidade:</label>
-        <input placeholder="(Required)" name="pass" id="pass" type="text" />
+        <input name="pass" id="pass" type="text" />
       </p>
       <p>
       <input class="btn product" type="button" value="Enviar!" id="btnSubmit"/>
     </p></div>
   </fieldset>
 
-  <fieldset>
+  <div id="container">
+    <table id="table-view">
+      <tbody>
+        <tr>
+          <td class="td nome" name="td">Nome:</td>
+      </tr>
+      <tr>
+        <td class="td price" name="td">Preço:</td>
+      </tr>
+      <tr>
+        <td class="td quantity" name="td">Quantidade:</td>
+      </tr>
+      </tbody>   
+  </table>
+  </div>
+  
+
+  <!-- <fieldset>
     <legend>Novos Funcionarios</legend>
       <p>
     <div id="product-list">
@@ -57,9 +75,7 @@
       <p>
       <input class="btn employee" type="button" value="Enviar!" id="btnSubmit"/>
     </p></div>
-  </fieldset>
-
-  <div id="res">Resultado:</div>
+  </fieldset> -->
  
     <script src="./script.js"></script>
   </body>
