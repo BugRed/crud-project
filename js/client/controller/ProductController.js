@@ -8,28 +8,38 @@ class ProductController{
         this._inputQuantity = $('#quantity');
         this._inputPrice = $('#price');
         this._inputDate = $('#date');
+        this._listProducts = new ListProducts();
+        this._productView = new ProductView($('#productView'));
+
+        this._productView.update(this._listProducts);
+
     }
 
     addEvent(event){
 
         event.preventDefault();
+        this._listProducts.addProduct(this._createProduct());
+        this._productView.update(this._listProducts);
+        this._cleanForm();
         
+    }
 
-        let date = new Date(this._inputDate
-                                .value
-                                .split('-'));
-                                
-        let product = new Product(
-            this._inputName,
-            this._inputQuantity,
-            this._inputPrice,
-            date,
+    _createProduct(){
+        return new Product(
+            this._inputName.value,
+            this._inputQuantity.value,
+            this._inputPrice.value,
+            DateHelper.textForDate(this._inputDate.value),
         )
+    }
 
-        let formatDate = `${product.date.getDate()}/${product.date.getMonth() + 1}/${product.date.getFullYear()}`
-        console.log(formatDate)
+    _cleanForm(){
+        this._inputName.value = '';
+        this._inputQuantity.value = 1;
+        this._inputPrice.value = 0,0;
+        this._inputDate.value = '';
 
-
+        this._inputName.focus();
     }
 
 }
